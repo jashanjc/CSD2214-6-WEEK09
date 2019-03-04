@@ -8,12 +8,28 @@
 <body>
     <div>hello loop !</div>
     <script>
-        var sum = 0;
-        for (var i = 1109; i >= 119;) {
-            sum += i;
-            i -= 11;
-        }
-        document.write("sum is :" + sum);
+        let calculator = {
+            sum: 0,
+            startnumber : 1109,
+            stepdownnumber : 11,
+            endnumber : 109,
+            addup: function () {
+                for (counter = this.startnumber; counter > this.endnumber; counter -= this.stepdownnumber) {
+                    this.sum += counter;
+                }
+                return this.sum;
+            }
+        };
+        document.write(calculator.addup());     
+
+       
+
+        // var sum = 0;
+       // for (var i = 1109; i >= 119;) {
+         //   sum += i;
+          //  i -= 11;
+       // }
+      //  document.write("sum is :" + sum);
     </script>
 </body>
 </html>
